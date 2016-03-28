@@ -1,0 +1,35 @@
+/*******************************************
+                MEDIA QUERIES
+*******************************************/
+$tablet-width: 768px;
+$desktop-width: 992px;
+$large-desktop-width: 1200px;
+
+@mixin mq-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mq-large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+
+/*******************************************
+                POSITIONAL
+*******************************************/
+@mixin absolute-center($top:auto, $left:auto) {
+    position:absolute;
+    top:$top;
+    left:$left;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
