@@ -1,0 +1,18 @@
+
+//Social diamond shaped button
+.social-diamond-btn {
+    border: 1px solid rgba(255,255,255,0.65);
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    @include transform(rotate(45deg));
+
+    i {
+        color: $colorMain;
+        @include transform(rotate(-45deg) translate(-50%, -50%));
+        left: 50%;
+        top: 50%;
+        padding: 0.5rem;
+        position: absolute;
+    }
+}

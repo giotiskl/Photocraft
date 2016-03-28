@@ -1,0 +1,43 @@
+.main-nav {
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px dashed rgba(244, 156, 18,0.35);
+
+    //logo
+    .nav-logo {
+        color: rgba(255,255,255,0.65);
+        cursor: pointer;
+        font-size: 120%;
+        font-weight: 300;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+
+        i {
+            color: $colorMain;
+            opacity: 0.5;
+            margin-right: 0.25rem;
+            transition: opacity 0.25s ease-out;
+        }
+
+        &:hover {
+            i {
+                opacity: 1;
+            }
+        }
+    }
+
+    //Links
+    a:link, a:visited {
+        color: rgba(255,255,255,0.65);
+        font-size: 90%;
+        font-weight: 300;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s ease-out;
+        padding: 1rem;
+
+        &:hover, &:active {
+            color: $colorMain;
+        }
+    }
+}
