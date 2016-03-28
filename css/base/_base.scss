@@ -1,0 +1,10 @@
+body, html {
+    color: $colorBlack;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+
+    @include mq-tablet {
+        font-size: 16px;
+    }
+}
