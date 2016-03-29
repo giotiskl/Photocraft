@@ -1,0 +1,51 @@
+.main-header {
+    @include background(linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)),
+                        url("../../img/headerbg.jpg"));
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 -100px 100px rgba(0,0,0,0.55);
+    height: 100vh;
+    position: relative;
+
+    //Hero box section
+    .hero-box {
+        //cursor: default;
+        //-webkit-user-select: none;
+        //-moz-user-select: none;
+        margin-top: 5rem;
+
+        h1, h2, h3 {
+            color: rgba(255,255,255,0.1);
+            opacity: 0;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 220%;
+            font-weight: 100;
+            margin-left: 1rem;
+            @include mq-tablet {
+                font-size: 320%;
+                margin-left: 2rem;
+            }
+        }
+        h2 {
+            @include animation-delay(0.5s);
+            font-size: 280%;
+            font-weight: 300;
+            margin-left: 3rem;
+            @include mq-tablet {
+                font-size: 420%;
+                margin-left: 6rem;
+            }
+        }
+        h1 {
+            @include animation-delay(1s);
+            font-size: 370%;
+            margin-left: 6rem;
+            @include mq-tablet {
+                font-size: 640%;
+                margin-left: 12rem;
+            }
+        }
+    }
+}

@@ -1,6 +1,87 @@
 .main-nav {
-    padding: 1rem 0 0.5rem 0;
+    background-color: $colorNavBG;
     border-bottom: 1px dashed rgba(244, 156, 18,0.35);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition: background-color .5s ease-out;
+    z-index: 10;
+
+    @include mq-tablet {
+        background-color: transparent;
+    }
+
+    //Container
+    .container {
+        padding: 1rem 1rem 0.5rem 1rem;
+
+        @include mq-tablet {
+            padding: 1rem 0 0.5rem 0;
+        }
+    }
+
+    //Navigation
+    ul {
+        display: none;
+        li {
+            display: block;
+            padding: 0.5rem 0;
+            z-index: 10;
+        }
+        position: absolute;
+        left: -2rem;
+        top: 4rem;
+
+        @include mq-tablet {
+            display: block;
+            position: static;
+            li {
+                display: inline-block;
+                padding: 0;
+            }
+        }
+    }
+
+    ul.open {
+        display: block;
+        z-index: 10;
+    }
+
+    .overlay {
+        @include background(linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0)))
+        opacity: 0;
+        height: 70vh;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 3.2rem;
+        transition: opacity .5s ease-out, visibility .5s ease-out;
+        visibility: hidden;
+    }
+
+    .overlay.open {
+        opacity: 1;
+        z-index: 9;
+        visibility: visible;
+    }
+
+    //Links
+    a:link, a:visited {
+        color: rgba(255,255,255,0.65);
+        font-size: 90%;
+        font-weight: 300;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.25s ease-out;
+        padding: 1rem;
+
+        &:hover, &:active {
+            color: $colorMain;
+        }
+    }
 
     //logo
     .nav-logo {
@@ -25,19 +106,62 @@
         }
     }
 
-    //Links
-    a:link, a:visited {
-        color: rgba(255,255,255,0.65);
-        font-size: 90%;
-        font-weight: 300;
-        letter-spacing: 0.15rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.25s ease-out;
-        padding: 1rem;
+    //Hamburger btn
+    .hamburger {
+        cursor: pointer;
+        width: 2rem;
+        height: 1.5rem;
+        position: relative;
+        @include transform(rotate(0deg));
+        transition: .5s ease-in-out;
+        z-index: 10;
 
-        &:hover, &:active {
-            color: $colorMain;
+        span {
+            display: block;
+            position: absolute;
+            height: 0.1rem;
+            width: 100%;
+            background: rgba(255,255,255,0.65);
+            border-radius: 0.1rem;
+            opacity: 1;
+            left: 0;
+            @include transform(rotate(0deg));
+            transition: .25s ease-in-out;
+        }
+        span:nth-child(1) {
+            top: 0;
+        }
+        span:nth-child(2), span:nth-child(3) {
+            top: 0.5rem;
+        }
+        span:nth-child(4) {
+            top: 1rem;
         }
     }
+
+    .hamburger.open {
+        span:nth-child(1) {
+            top: 0.5rem;
+            width: 0;
+            left: 50%;
+        }
+        span:nth-child(2) {
+            @include transform(rotate(45deg));
+        }
+        span:nth-child(3) {
+            @include transform(rotate(-45deg));
+        }
+        span:nth-child(4) {
+            top: 18px;
+            width: 0;
+            left: 50%;
+        }
+    }
+
+}
+
+//Sticky version
+.main-nav.sticky {
+    background-color: $colorNavBG;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
 }

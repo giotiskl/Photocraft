@@ -1,13 +1,27 @@
-//Vendor
-@import 'vendors/bourbon/bourbon';
-
 //Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300italic,300,100);
 
+//Vendor
+@import 'vendors/bourbon/bourbon';
+@import 'vendors/animate/animate';
+
 //Base
 @import 'base/variables';
+@import 'base/helpers';
 @import 'base/mixins';
 @import 'base/base';
 
 //Components
-@import 'navigations/main-nav';
+    //Navigations
+    @import 'navigations/horizontal-nav';
+    @import 'navigations/main-nav';
+    @import 'navigations/header-social-nav';
+    //Buttons
+    @import 'buttons/buttons';
+
+//Layout
+@import 'layouts/header';
+
+body {
+    height: 1500px;
+}

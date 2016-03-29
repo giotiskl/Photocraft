@@ -1,3 +1,11 @@
+.no-scroll {
+    overflow: hidden;
+}
+
 .main-color {
     color: $colorMain;
+}
+
+.text-glowing {
+    text-shadow: 0 0 5px $colorMain;
 }
