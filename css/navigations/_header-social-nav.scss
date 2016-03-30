@@ -1,0 +1,23 @@
+.header-social-nav {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 100%;
+    text-align: center;
+
+    @include mq-tablet {
+        text-align: right;
+    }
+
+    li {
+        opacity: 0;
+        margin: 0 0.75rem;
+    }
+
+    //Add a progressive animation-delay to achieve entrance effect for social-nav
+    @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+            @include animation-delay(#{$i * 0.1}s);
+        }
+    }
+}

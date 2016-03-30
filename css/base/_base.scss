@@ -3,8 +3,13 @@ body, html {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 
     @include mq-tablet {
         font-size: 16px;
     }
+}
+
+input, button, textarea {
+    outline: 0;
 }

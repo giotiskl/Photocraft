@@ -1,18 +1,69 @@
 
-//Social diamond shaped button
-.social-diamond-btn {
-    border: 1px solid rgba(255,255,255,0.65);
+%btn-base {
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    border: 2px solid $colorMain;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease-out;
+    padding: 0.65rem 2rem;
+}
+
+.full-btn {
+    @extend %btn-base;
+    background-color: $colorMain;
+    color: white;
+
+    &:hover {
+        background-color: $colorMainDark;
+        border: 2px solid $colorMainDark;
+    }
+}
+
+.ghost-btn {
+    @extend %btn-base;
+    background-color: transparent;
+    color: $colorMain;
+
+    &:hover {
+        background-color: $colorMainDark;
+        border: 2px solid $colorMainDark;
+        color: white;
+    }
+}
+
+//Social navigation buttons
+.social-btn {
+    cursor: pointer;
     width: 2rem;
     height: 2rem;
     position: relative;
-    @include transform(rotate(45deg));
+
+    .diamond-frame {
+        background-color: transparent;
+        border: 2px solid rgba(255,255,255,0.45);
+        height: 100%;
+        width: 100%;
+        transition: all .25s ease-out;
+        @include transform(rotate(45deg));
+    }
 
     i {
+        @include absolute-center(50%, 50%);
         color: $colorMain;
-        @include transform(rotate(-45deg) translate(-50%, -50%));
-        left: 50%;
-        top: 50%;
         padding: 0.5rem;
         position: absolute;
+        transition: color .25s ease-out;
+    }
+}
+
+.social-btn:hover {
+
+    .diamond-frame {
+        background-color: $colorMain;
+        @include transform(rotate(90deg));
+    }
+
+    i {
+        color: white;
     }
 }

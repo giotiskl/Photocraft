@@ -48,4 +48,14 @@
             }
         }
     }
+
+    //Hero button
+    .full-btn {
+        @include absolute-center(35%, 50%);
+        position: absolute;
+
+        @include mq-tablet {
+            @include absolute-center(55%, 70%);
+        }
+    }
 }

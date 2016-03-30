@@ -2,10 +2,7 @@ $(function() {
 
     //Mobile navigation
     $('.hamburger').click(function() {
-        $('body').toggleClass('no-scroll');
-        $(this).toggleClass('open');
-        $('.main-nav ul').toggleClass('open');
-        $('.overlay').toggleClass('open');
+        toggleNavigation();
     });
     //Nav waypoint
     $('.main-header').waypoint(function() {
@@ -13,4 +10,14 @@ $(function() {
     }, {
         offset: '-1%',
     });
+
+    /**
+    * Toggles the navigation in mobile
+    */
+    function toggleNavigation() {
+        $('body').toggleClass('no-scroll');
+        $('.hamburger').toggleClass('open');
+        $('.main-nav ul').toggleClass('open');
+        $('.overlay').toggleClass('open');
+    }
 });
