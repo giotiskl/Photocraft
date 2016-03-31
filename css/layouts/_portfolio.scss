@@ -39,12 +39,13 @@
         .filtr-img {
             width: 100%;
             min-height: auto;
-            @include filter(grayscale(80%));
-            @include transform(scale(1.5));
+            @include filter(brightness(50%));
+            @include transform(scale(1.25));
             transition: all .5s ease-out;
+            position: relative;
 
             &:hover {
-                @include filter(grayscale(0));
+                @include filter(brightness(100%));
                 @include transform(scale(1));
             }
         }
