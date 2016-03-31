@@ -60,4 +60,37 @@ $(function() {
         });
         $('.swipebox').swipebox();
     });
+
+    /*******************************
+    *           ABOUT ME
+    ********************************/
+    $('#about-me').waypoint(function() {
+        $('.photo-container img').addClass('animated slideInUp');
+    }, {
+        offset: '50%'
+    });
+
+    $('#about-me').waypoint(function() {
+        $('#story-now').addClass('animated fadeInRight');
+    }, {
+        offset: '50%'
+    });
+
+    $('#about-me').waypoint(function() {
+        $('#story-senior').addClass('animated fadeInRight');
+    }, {
+        offset: '40%'
+    });
+
+    $('#about-me').waypoint(function() {
+        $('#story-junior').addClass('animated fadeInRight');
+    }, {
+        offset: '30%'
+    });
+
+    $('#about-me').waypoint(function() {
+        $('#story-education').addClass('animated fadeInRight');
+    }, {
+        offset: '20%'
+    });
 });
