@@ -21,9 +21,6 @@
     //Buttons
     @import 'buttons/buttons';
 
-//Layout
+//Layouts
 @import 'layouts/header';
-
-body {
-    height: 1500px;
-}
+@import 'layouts/portfolio';

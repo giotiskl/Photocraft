@@ -1,0 +1,53 @@
+.portfolio {
+    background-color: $colorMainBlack;
+    color: white;
+    padding-bottom: 2rem;
+
+    .horizontal-nav {
+        padding: 0;
+        text-align: center;
+
+        li {
+            //display: block;
+            //@include mq-tablet {
+                display: inline-block;
+            //}
+        }
+
+        .portfolio-btn {
+            margin: 0.75rem;
+            position: relative;
+
+            @include mq-tablet {
+                margin: 0.25rem 2rem 0.25rem 2rem;
+            }
+        }
+    }
+
+    //Filterizr Controls
+    .controls-row {
+        margin: 2rem 0 1rem 0;
+    }
+
+    //Filterizr
+    .filtr-container {
+        overflow: hidden;
+    }
+    .filtr-item {
+        overflow: hidden;
+        width: 25.05%;
+
+        .filtr-img {
+            width: 100%;
+            min-height: auto;
+            @include filter(grayscale(80%));
+            @include transform(scale(1.5));
+            transition: all .5s ease-out;
+
+            &:hover {
+                @include filter(grayscale(0));
+                @include transform(scale(1));
+            }
+        }
+    }
+}

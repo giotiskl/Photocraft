@@ -10,40 +10,19 @@
     text-shadow: 0 0 5px $colorMain;
 }
 
-//Diamond shaped background
-.diamond-shaped {
-    background-color: $colorMain;
-    color: white;
-    display: block;
+//Underlined heading
+.underlined {
     text-align: center;
-    text-transform: uppercase;
-    padding: 0.75rem 0;
     position: relative;
-    width: 9rem;
 }
-
-.diamond-shaped:after {
+.underlined:after {
     content: '';
+    background-color: $colorMain;
     display: block;
-    border-style: solid;
-    border-width: 1.45rem 0 1.45rem 1.25rem;
-    border-color: transparent transparent transparent $colorMain;
-    width: 0;
-    height: 0;
+    width: 100px;
+    height: 2px;
     position: absolute;
-    right: -1.25rem;
-    top: 0;
-}
-
-.diamond-shaped:before {
-    content: '';
-    display: block;
-    border-style: solid;
-    border-width: 1.45rem 1.25rem 1.45rem 0;
-    border-color: transparent $colorMain transparent transparent;
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: -1.25rem;
-    top: 0;
+    bottom: -0.5rem;
+    left: 50%;
+    @include transform(translateX(-50%));
 }

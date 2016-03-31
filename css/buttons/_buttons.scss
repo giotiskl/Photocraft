@@ -1,7 +1,7 @@
-
 %btn-base {
     box-shadow: 0 2px 2px rgba(0,0,0,0.25);
     border: 2px solid $colorMain;
+    cursor: pointer;
     text-align: center;
     text-transform: uppercase;
     transition: all .25s ease-out;
@@ -23,12 +23,12 @@
     @extend %btn-base;
     background-color: transparent;
     color: $colorMain;
+}
 
-    &:hover {
-        background-color: $colorMainDark;
-        border: 2px solid $colorMainDark;
-        color: white;
-    }
+.ghost-btn:hover, .ghost-btn.active {
+    background-color: $colorMainDark;
+    border: 2px solid $colorMainDark;
+    color: white;
 }
 
 //Social navigation buttons
@@ -66,4 +66,41 @@
     i {
         color: white;
     }
+}
+
+//Portfolio button
+.portfolio-btn {
+    color: #b6b6b6;
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: color .25s ease-out;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.portfolio-btn.active {
+    color: white;
+}
+
+.portfolio-btn:after {
+    content: '';
+    background-color: $colorMain;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: transform .25s ease-out;
+    @include transform(scaleX(0));
+    @include transform-origin(left center);
+}
+
+.portfolio-btn:hover:after {
+    @include transform(scaleX(1));
+}
+
+.portfolio-btn.active:after {
+    @include transform(scaleX(1));
 }

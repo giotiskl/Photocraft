@@ -23,28 +23,49 @@
 
     //Navigation
     ul {
-        display: none;
-        li {
-            display: block;
-            padding: 0.5rem 0;
-            z-index: 10;
-        }
+        display: block;
+        visibility: hidden;
+        transition: visibility .5s ease-out;
         position: absolute;
         left: -2rem;
         top: 4rem;
 
         @include mq-tablet {
-            display: block;
+            visibility: visible;
             position: static;
-            li {
+        }
+
+        //Links
+        li {
+            display: block;
+            opacity: 0;
+            padding: 0.5rem 0;
+            @include transform(translateX(16rem) scale(0));
+            transition: all .5s ease-out;
+            z-index: 10;
+
+            @include mq-tablet {
                 display: inline-block;
                 padding: 0;
+                opacity: 1;
+                @include transform(translateX(0) scale(1));
+                transition: none;
             }
+        }
+        @for $i from 1 through 4 {
+            li:nth-child(#{$i}), li.open:nth-child(#{$i}) {
+                @include transition-delay(#{$i * 0.05}s);
+            }
+        }
+        //Links open - for mobile navigation transition
+        li.open {
+            opacity: 1;
+            @include transform(translateX(0) scale(1));
         }
     }
 
     ul.open {
-        display: block;
+        visibility: visible;
         z-index: 10;
     }
 
