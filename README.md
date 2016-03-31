@@ -6,7 +6,7 @@ Photocraft is a beautiful, elegant website theme for photography and portfolios.
 ##Frameworks & Plugins
 * CSS: SASS, Bootstrap, Animate.css
 * Fonts: Raleway, Awesome-Font
-* JavaScript: jQuery, Filterizr, Waypoints.js
+* JavaScript: jQuery, Filterizr, Waypoints.js, Swipebox
 
 ##Browser support
 IE10+ and all modern browsers.

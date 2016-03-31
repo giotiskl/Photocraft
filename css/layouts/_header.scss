@@ -4,14 +4,12 @@
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 -100px 100px rgba(0,0,0,0.55);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
     height: 100vh;
     position: relative;
 
     //Hero box section
     .hero-box {
-        //cursor: default;
-        //-webkit-user-select: none;
-        //-moz-user-select: none;
         margin-top: 5rem;
 
         h1, h2, h3 {
@@ -50,10 +48,11 @@
 
     //Hero button
     .full-btn {
-        @include absolute-center(35%, 50%);
+        display: none;
         position: absolute;
 
         @include mq-tablet {
+            display: block;
             @include absolute-center(55%, 70%);
         }
     }

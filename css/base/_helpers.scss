@@ -2,6 +2,7 @@
     overflow: hidden;
 }
 
+//Colors & Text
 .main-color {
     color: $colorMain;
 }
@@ -25,4 +26,9 @@
     bottom: -0.5rem;
     left: 50%;
     @include transform(translateX(-50%));
+}
+
+//Backgrounds
+.lightgrey-section {
+    background-color: #f9f9f9;
 }

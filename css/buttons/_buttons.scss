@@ -73,17 +73,17 @@
     color: #b6b6b6;
     cursor: pointer;
     font-size: 90%;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     transition: color .25s ease-out;
 
     &:hover {
-        color: white;
+        color: $colorMainBlack;
     }
 }
 
 .portfolio-btn.active {
-    color: white;
+    color: $colorMainBlack;
 }
 
 .portfolio-btn:after {
@@ -91,7 +91,7 @@
     background-color: $colorMain;
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     transition: transform .25s ease-out;
     @include transform(scaleX(0));
     @include transform-origin(left center);

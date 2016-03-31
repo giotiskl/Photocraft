@@ -1,17 +1,13 @@
 .portfolio {
-    background-color: $colorMainBlack;
-    color: white;
-    padding-bottom: 2rem;
+    background-color: white;
+    color: $colorMainBlack;
 
     .horizontal-nav {
         padding: 0;
         text-align: center;
 
         li {
-            //display: block;
-            //@include mq-tablet {
-                display: inline-block;
-            //}
+            display: inline-block;
         }
 
         .portfolio-btn {
@@ -32,10 +28,13 @@
     //Filterizr
     .filtr-container {
         overflow: hidden;
+        margin: 0 auto;
+        //max-width: 1400px;
     }
+
     .filtr-item {
         overflow: hidden;
-        width: 25.05%;
+        width: 25.1%;
 
         .filtr-img {
             width: 100%;
