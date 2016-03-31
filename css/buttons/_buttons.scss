@@ -78,12 +78,12 @@
     transition: color .25s ease-out;
 
     &:hover {
-        color: $colorMainBlack;
+        color: white;
     }
 }
 
 .portfolio-btn.active {
-    color: $colorMainBlack;
+    color: white;
 }
 
 .portfolio-btn:after {

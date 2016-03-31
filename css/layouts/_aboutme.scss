@@ -1,5 +1,5 @@
 .about-me {
-    background-color: #171717;
+    background-color: $colorBlack;
     color: white;
     padding-bottom: 2rem;
     h1 {
@@ -25,6 +25,7 @@
             img {
                 @include animation-duration(2s);
                 max-width: 80%;
+                opacity: 0;
                 height: auto;
                 position: absolute;
                 bottom: 6.25rem;
@@ -32,7 +33,7 @@
         }
 
         .cv-container {
-            background-color: #201f1f;
+            background-color: $colorBlackLight;
             border-left:  1px dashed rgba(244, 156, 18,0.35);
             padding: 1rem;
 
@@ -77,10 +78,17 @@
             }
         }
 
+        //pointer transition
         .story:hover {
             .story-pointer {
                 background-color: $colorMain;
             }
         }
+
+        //animations
+        #story-now, #story-senior, #story-junior, #story-education {
+            opacity: 0;
+        }
+
     }
 }

@@ -65,7 +65,7 @@ $(function() {
     *           ABOUT ME
     ********************************/
     $('#about-me').waypoint(function() {
-        $('.photo-container img').addClass('animated slideInUp');
+        $('.photo-container img').addClass('animated fadeInUp');
     }, {
         offset: '50%'
     });
