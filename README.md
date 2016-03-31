@@ -1,4 +1,5 @@
 # Photocraft
+Photocraft is still in development.
 
 ##Description
 Photocraft is a beautiful, elegant website theme for photography and portfolios. It uses modern HTML5, CSS3 and JavaScript.
