@@ -61,39 +61,19 @@ $(function() {
             });
             $('.swipebox').swipebox();
         });
-    });
 
-    /*******************************
-    *           ABOUT ME
-    ********************************/
-    $('#about-me').waypoint(function() {
-        $('.photo-container img').addClass('animated fadeInUp');
-    }, {
-        offset: '80%'
-    });
-
-    $('#about-me').waypoint(function() {
-        $('#story-now').addClass('animated fadeInRight');
-    }, {
-        offset: '70%'
-    });
-
-    $('#about-me').waypoint(function() {
-        $('#story-senior').addClass('animated fadeInRight');
-    }, {
-        offset: '60%'
-    });
-
-    $('#about-me').waypoint(function() {
-        $('#story-junior').addClass('animated fadeInRight');
-    }, {
-        offset: '50%'
-    });
-
-    $('#about-me').waypoint(function() {
-        $('#story-education').addClass('animated fadeInRight');
-    }, {
-        offset: '40%'
+        /*******************************
+        *           ABOUT ME
+        ********************************/
+        $('.story-container').waypoint(function() {
+            $('#photographer-img').addClass('animated fadeInUp');
+            $('#story-now').addClass('animated fadeInRight');
+            $('#story-senior').addClass('animated fadeInRight');
+            $('#story-junior').addClass('animated fadeInRight');
+            $('#story-education').addClass('animated fadeInRight');
+        }, {
+            offset: '80%'
+        });
     });
 
     //Smooth scroll navigations

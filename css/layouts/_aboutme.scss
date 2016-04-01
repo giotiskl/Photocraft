@@ -95,6 +95,15 @@
         #story-now, #story-senior, #story-junior, #story-education {
             opacity: 0;
         }
+        #story-senior {
+            @include animation-delay(.25s);
+        }
+        #story-junior {
+            @include animation-delay(.5s);
+        }
+        #story-education {
+            @include animation-delay(.75s);
+        }
 
     }
 }
