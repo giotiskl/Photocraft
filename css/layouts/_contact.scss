@@ -1,10 +1,23 @@
 .contact {
     color: white;
-    text-align: center;
-    padding-bottom: 2rem;
+    text-align: right;
+    padding: 1rem;
+
+    @include mq-tablet {
+        padding: 0 0 2rem 0;
+    }
 
     h1 {
         margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+        padding-top: .5rem;
+
+        i {
+            color: $colorMain;
+            margin-right: 0.75rem;
+        }
     }
 
     #name, #email, #message {
@@ -13,13 +26,9 @@
         font-size: 90%;
         margin: 0.25rem 0;
         padding: 0.75rem;
-        width: 80%;
+        width: 100%;
         text-transform: uppercase;
         transition: border .5s ease-out;
-
-        @include mq-tablet {
-            width: 50%;
-        }
 
         &:focus {
             border: 1px dashed $colorMain;
