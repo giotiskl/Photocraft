@@ -16,7 +16,7 @@
             background-position: center;
             background-size: cover;
             padding-top: 1rem;
-            height: 40rem;
+            height: 42rem;
             margin-bottom: -10rem;
             position: relative;
 
@@ -27,7 +27,13 @@
                 opacity: 0;
                 height: auto;
                 position: absolute;
-                bottom: 6.25rem;
+                bottom: 0;
+                @include mq-desktop {
+                    bottom: 4rem;
+                }
+                @include mq-large-desktop {
+                    bottom: 6.5rem;
+                }
             }
         }
 
@@ -53,7 +59,8 @@
                 width: 22px;
                 height: 22px;
                 position: absolute;
-                @include absolute-center(50%, -6.7%);
+                left: -3.7rem;
+                top: 3.5rem;
                 transition: all .5s ease-out;
             }
 

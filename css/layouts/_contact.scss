@@ -25,4 +25,8 @@
             border: 1px dashed $colorMain;
         }
     }
+
+    #message {
+        resize: none;
+    }
 }
