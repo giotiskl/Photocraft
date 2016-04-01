@@ -2,7 +2,7 @@
     @include background(linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0)),
                         url("../../img/headerbg.jpg"));
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     //@include animation(scaleBG 20s);
     //@include animation-timing-function(ease-out);
     box-shadow: 0 2px 2px rgba(0,0,0,0.25);
