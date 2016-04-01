@@ -19,18 +19,19 @@
   <body>
       <div class="fluid-container">
          <!-- ========================== MAIN HEADER =============================-->
-          <header class="main-header">
+          <header class="main-header" id="home">
               <!-- Main navigation -->
               <nav class="main-nav">
+                  <h6 class="sr-only">main website navigation</h6>
                   <div class="container clearfix">
                       <div class="nav-logo pull-left">
                         <i class="fa fa-camera"></i>Photo<span class="main-color text-glowing">craft</span>
                       </div>
                       <ul class="pull-right">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Portfolio</a></li>
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Contact</a></li>
+                          <li><a href="#home">Home</a></li>
+                          <li><a href="#portfolio">Portfolio</a></li>
+                          <li><a href="#about-me">About</a></li>
+                          <li><a href="#contact">Contact</a></li>
                       </ul>
                       <div class="overlay visible-xs"></div>
                       <div class="hamburger pull-right visible-xs">
@@ -47,29 +48,34 @@
                       <h2 class="animated fadeInLeft">Discover</h2>
                       <h1 class="animated fadeInLeft">Capture</h1>
                   </div>
-                  <button class="full-btn">See my work</button>
-                  <ul class="horizontal-nav header-social-nav">
-                      <li class="social-btn animated rotateIn">
-                          <div class="diamond-frame"></div>
-                          <i class="fa fa-facebook"></i>
-                      </li>
-                      <li class="social-btn animated rotateIn">
-                          <div class="diamond-frame"></div>
-                          <i class="fa fa-twitter"></i>
-                      </li>
-                      <li class="social-btn animated rotateIn">
-                          <div class="diamond-frame"></div>
-                          <i class="fa fa-instagram"></i>
-                      </li>
-                      <li class="social-btn animated rotateIn">
-                          <div class="diamond-frame"></div>
-                          <i class="fa fa-linkedin"></i>
-                      </li>
-                      <li class="social-btn animated rotateIn">
-                          <div class="diamond-frame"></div>
-                          <i class="fa fa-google-plus"></i>
-                      </li>
-                  </ul>
+                  <a href="#portfolio" class="hero-btn">
+                      <i class="fa fa-arrow-down"></i>
+                  </a>
+                  <nav>
+                      <h6 class="sr-only">Header social navigation</h6>
+                      <ul class="horizontal-nav header-social-nav">
+                          <li class="social-btn animated rotateIn">
+                              <div class="diamond-frame"></div>
+                              <i class="fa fa-facebook"></i>
+                          </li>
+                          <li class="social-btn animated rotateIn">
+                              <div class="diamond-frame"></div>
+                              <i class="fa fa-twitter"></i>
+                          </li>
+                          <li class="social-btn animated rotateIn">
+                              <div class="diamond-frame"></div>
+                              <i class="fa fa-instagram"></i>
+                          </li>
+                          <li class="social-btn animated rotateIn">
+                              <div class="diamond-frame"></div>
+                              <i class="fa fa-linkedin"></i>
+                          </li>
+                          <li class="social-btn animated rotateIn">
+                              <div class="diamond-frame"></div>
+                              <i class="fa fa-google-plus"></i>
+                          </li>
+                      </ul>
+                  </nav>
               </div>
           </header>
 
@@ -223,6 +229,81 @@
                   </div>
               </div>
           </section>
+
+          <!-- ========================== CONTACT SECTION =============================-->
+          <section class="contact lightblack-section" id="contact">
+              <div class="container">
+                  <div class="row">
+                      <h1 class="underlined">Contact me</h1>
+                  </div>
+                  <div class="row">
+                      <form method="post" action="#">
+                          <div class="row">
+                              <input type="text" id="name" name="name" placeholder="full name" required>
+                          </div>
+                          <div class="row">
+                              <input type="email" id="email" name="email" placeholder="email" required>
+                          </div>
+                          <div class="row">
+                              <textarea name="message" id="message" placeholder="message" rows="7"></textarea>
+                          </div>
+                          <div class="row">
+                              <button class="full-btn" type="submit">Send</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </section>
+
+          <!-- ========================== FOOTER SECTION =============================-->
+          <footer class="main-footer" id="main-footer">
+              <div class="container">
+                  <div class="row">
+                      <!-- Footer site navigation -->
+                      <div class="col-sm-6 clearfix">
+                          <nav class="site-footer-nav">
+                              <h6 class="sr-only">footer site navigation</h6>
+                              <ul class="horizontal-nav">
+                                  <li>
+                                      <a class="main-link" href="#">Home</a> &mdash;
+                                      <a class="main-link" href="#">Portfolio</a> &mdash;
+                                      <a class="main-link" href="#">About me</a> &mdash;
+                                      <a class="main-link" href="#">Contact</a>
+                                  </li>
+                              </ul>
+                          </nav>
+                      </div>
+                      <!-- Footer social navigation -->
+                      <div class="col-sm-6 clearfix">
+                          <nav class="social-footer-nav">
+                              <h6 class="sr-only">footer social navigation</h6>
+                              <ul class="horizontal-nav">
+                                  <li class="social-btn">
+                                      <i class="fa fa-facebook"></i>
+                                  </li>
+                                  <li class="social-btn">
+                                      <i class="fa fa-twitter"></i>
+                                  </li>
+                                  <li class="social-btn">
+                                      <i class="fa fa-instagram"></i>
+                                  </li>
+                                  <li class="social-btn">
+                                      <i class="fa fa-linkedin"></i>
+                                  </li>
+                                  <li class="social-btn">
+                                      <i class="fa fa-google-plus"></i>
+                                  </li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <p>
+                          Photocraft is developed by <a class="main-link" href="http://yiotis.net" target="_blank">Yiotis Kaltsikis</a> and released under the <a class="main-link" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
+                      </p>
+                  </div>
+              </div>
+          </footer>
       </div>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

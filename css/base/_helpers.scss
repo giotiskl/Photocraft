@@ -43,3 +43,16 @@
 .lightblack-section {
     background-color: $colorBlackLight;
 }
+
+//Links
+.main-link:link, .main-link:visited {
+    color: white;
+    border-bottom: 1px dashed transparent;
+    text-decoration: none;
+    transition: all .25s ease-out;
+
+    &:hover, &:active {
+        color: $colorMain;
+        border-bottom: 1px dashed $colorMain;
+    }
+}

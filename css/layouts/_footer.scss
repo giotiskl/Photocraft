@@ -1,0 +1,38 @@
+.main-footer {
+    background-color: $colorBlack;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+
+    .site-footer-nav {
+        margin-bottom: 1.5rem;
+
+        @include mq-tablet {
+            float: left;
+            margin-bottom: 0;
+        }
+    }
+
+    .social-footer-nav {
+        font-size: 130%;
+        margin-bottom: 1.5rem;
+
+        @include mq-tablet {
+            float: right;
+            margin-bottom: 0rem;
+        }
+
+        li {
+            margin: 0 0.5rem;
+        }
+    }
+
+    p {
+        color: #b6b6b6;
+        padding: 0 1rem;
+
+        @include mq-tablet {
+            margin-top: 3rem;
+        }
+    }
+}

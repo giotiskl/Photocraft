@@ -67,30 +67,44 @@ $(function() {
     $('#about-me').waypoint(function() {
         $('.photo-container img').addClass('animated fadeInUp');
     }, {
-        offset: '50%'
+        offset: '80%'
     });
 
     $('#about-me').waypoint(function() {
         $('#story-now').addClass('animated fadeInRight');
     }, {
-        offset: '50%'
+        offset: '70%'
     });
 
     $('#about-me').waypoint(function() {
         $('#story-senior').addClass('animated fadeInRight');
     }, {
-        offset: '40%'
+        offset: '60%'
     });
 
     $('#about-me').waypoint(function() {
         $('#story-junior').addClass('animated fadeInRight');
     }, {
-        offset: '30%'
+        offset: '50%'
     });
 
     $('#about-me').waypoint(function() {
         $('#story-education').addClass('animated fadeInRight');
     }, {
-        offset: '20%'
+        offset: '40%'
     });
+
+    //Smooth scroll navigations
+    $('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
 });

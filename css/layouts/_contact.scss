@@ -1,0 +1,28 @@
+.contact {
+    color: white;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    #name, #email, #message {
+        border: 1px solid #121212;
+        background-color: $colorBlack;
+        font-size: 90%;
+        margin: 0.25rem 0;
+        padding: 0.75rem;
+        width: 80%;
+        text-transform: uppercase;
+        transition: border .5s ease-out;
+
+        @include mq-tablet {
+            width: 50%;
+        }
+
+        &:focus {
+            border: 1px dashed $colorMain;
+        }
+    }
+}

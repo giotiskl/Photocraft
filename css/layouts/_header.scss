@@ -13,7 +13,7 @@
         margin-top: 5rem;
 
         h1, h2, h3 {
-            color: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.25);
             opacity: 0;
         }
         h3 {
@@ -47,13 +47,38 @@
     }
 
     //Hero button
-    .full-btn {
+    .hero-btn {
         display: none;
-        position: absolute;
+
+        i {
+            @include absolute-center(50%, 50%);
+            @include animation(bounce 0.5s);
+            @include animation-direction(alternate-reverse);
+            @include animation-iteration-count(infinite);
+            font-size: 140%;
+            color: white !important;
+            position: absolute;
+        }
 
         @include mq-tablet {
-            display: block;
-            @include absolute-center(55%, 70%);
+            background-color: $colorMain;
+            border: 2px solid rgba(255,255,255,.5);
+            display: block !important;
+            cursor: pointer !important;
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            @include absolute-center(95%, 50%);
+            z-index: 3;
+        }
+    }
+
+    @include keyframes(bounce) {
+        from {
+            @include transform(translate(-10px, -15px));
+        }
+        to {
+            @include transform(translate(-10px, -5px));
         }
     }
 }
