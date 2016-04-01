@@ -33,10 +33,10 @@
 
         .cv-container {
             background-color: $colorBlackLight;
-            border-left:  1px dashed rgba(244, 156, 18,0.35);
             padding: 1rem;
 
             @include mq-tablet {
+                border-left:  1px dashed rgba(244, 156, 18,0.35);
                 padding: 1rem 1rem 1rem 3rem;
             }
         }
