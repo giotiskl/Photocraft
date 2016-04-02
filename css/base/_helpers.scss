@@ -56,3 +56,7 @@
         border-bottom: 1px dashed $colorMain;
     }
 }
+
+a.active {
+    color: $colorMain !important;
+}

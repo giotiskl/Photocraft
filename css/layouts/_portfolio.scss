@@ -36,18 +36,31 @@
         width: 25.1%;
 
         .filtr-img {
+            display: block;
             width: 100%;
             min-height: auto;
-            @include filter(brightness(50%));
+            opacity: .65;
             @include transform(scale(1.25));
             transition: all .5s ease-out;
             position: relative;
 
             &:hover {
-                @include filter(brightness(100%));
+                opacity: 1;
                 @include transform(scale(1));
             }
         }
+    }
+
+    .filtr-item:before {
+        background-color: black;
+        content: "";
+        display: block;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
     .filteredOut {

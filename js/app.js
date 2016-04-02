@@ -76,6 +76,18 @@ $(function() {
         });
     });
 
+    /*******************************
+    *           CONTACT
+    ********************************/
+    $('#contact').waypoint(function() {
+        $('.contact-details').addClass('animated fadeInUp');
+    }, {
+        offset: '80%'
+    });
+
+    /*******************************
+    *           MISC
+    ********************************/
     //Smooth scroll navigations
     $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
@@ -87,4 +99,14 @@ $(function() {
 	        'scrollTop': $target.offset().top
 	    }, 900, 'swing');
 	});
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        $('.navlink').each(function (event) {
+            if (y >= $($(this).attr('href')).offset().top - 500) {
+                $('.navlink').not(this).removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
 });
