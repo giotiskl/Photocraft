@@ -19,6 +19,12 @@
   }
 }
 
+@mixin mq-xlarge-desktop {
+  @media (min-width: #{$xlarge-desktop-width}) {
+    @content;
+  }
+}
+
 /*******************************************
                 POSITIONAL
 *******************************************/

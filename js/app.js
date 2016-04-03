@@ -97,7 +97,9 @@ $(function() {
         $('.story-pointer').click(function() {
             var storyToActivate = '#' + $(this).data('target');
             $('.story-pointer').removeClass('active');
+            $('.story-pointer .tooltip-time').removeClass('active');
             $(this).addClass('active');
+            $(this).find('.tooltip-time').addClass('active');
 
             $('.story article').css('display', 'none');
             $(storyToActivate).css('display', 'block');

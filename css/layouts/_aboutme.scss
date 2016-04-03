@@ -1,34 +1,55 @@
 .about-me {
     background-color: white;
     color: $colorBlack;
-    padding-bottom: 7rem;
+    padding-bottom: 3.5rem;
     position: relative;
 
     h1 {
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
+
+        @include mq-tablet {
+            margin-bottom: 4rem;
+        }
     }
 
     .story-container {
 
         //photographer photo
-        .story-img {
+        #photographer-img {
             @include filter(grayscale(100%));
             display: none;
             opacity: .25;
-            max-width: 300px;
-            height: auto;
+            width: auto;
+            max-height: 80%;
             position: absolute;
-            transform: translateX(-15%);
-            left: 15%;
+            transform: translateX(-5%);
+            left: 5%;
             bottom: 0;
 
             @include mq-tablet {
+                max-height: 50%;
                 display: block;
+            }
+
+            @include mq-desktop {
+                max-height: 60%;
+            }
+
+            @include mq-large-desktop {
+                transform: translateX(-10%);
+                max-height: 70%;
+                left: 10%;
+            }
+
+            @include mq-xlarge-desktop {
+                transform: translateX(-15%);
+                max-height: 80%;
+                left: 15%;
             }
         }
 
         .cv-container {
-            padding: 1rem 1rem 1rem 1rem;
+            padding: 1rem;
             position: relative;
             float: right;
 
@@ -41,7 +62,7 @@
         //Story pointer component - dynamically positioned by JS
         .story-pointer-row {
             border-bottom:  1px dashed rgba(244, 156, 18,0.35);
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             position: relative;
 
             @include mq-tablet {
@@ -62,6 +83,26 @@
             height: 22px;
             position: absolute;
             transition: all .5s ease-out;
+
+            .tooltip-time {
+                color: $colorBlack;
+                font-size: 80%;
+                position: absolute;
+                white-space: nowrap;
+                transition: color .5s ease-out;
+                left: -1.5rem;
+                top: -2.5rem;
+
+                @include mq-tablet {
+                    font-size: 100%;
+                    left: -6rem;
+                    top: 0;
+                }
+            }
+
+            .tooltip-time.active {
+                color: $colorMain !important;
+            }
         }
 
         .story-pointer:hover, .story-pointer.active {
@@ -79,24 +120,33 @@
                 padding: 0.5rem 0;
             }
 
-            .time-heading {
-                font-size: 140%;
-                text-transform: none;
-                margin-bottom: .5rem;
-            }
-
             .story-heading {
-                @include animation-delay(.25s);
                 color: $colorMain;
                 font-weight: 300;
-                font-size: 220%;
-                margin-bottom: 2.5rem;
+                font-size: 180%;
+                margin-bottom: 0.25rem;
+
+                @include mq-tablet {
+                    font-size: 220%;
+                }
+            }
+
+            .time-heading {
+                @include animation-delay(0.35s);
+                font-size: 130%;
+                text-transform: none;
             }
 
             .story-details {
-                @include animation-delay(.5s);
+                @include animation-delay(0.65s);
                 font-size: 120%;
                 line-height: 200%;
+                margin: 2rem 0;
+            }
+
+            .story-image-container {
+                @include animation-delay(1s);
+                box-shadow: 0 2px 5px rgba(0,0,0,.25);
             }
         }
 
