@@ -61,10 +61,12 @@ $(function() {
             });
             $('.swipebox').swipebox();
         });
+    });
 
-        /*******************************
-        *           ABOUT ME
-        ********************************/
+    /*******************************
+    *           ABOUT ME
+    ********************************/
+    $('.cv-container').imagesLoaded(function() {
         /**
         * (Re)arranges the story pointer buttons in the timeline responsively
         */
