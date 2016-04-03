@@ -13,11 +13,11 @@
     }
 
     @include mq-desktop {
-        height: 60vh;
+        height: 550px;
     }
 
     @include mq-large-desktop {
-        height: 70vh;
+        height: 620px;
     }
 
     .container {

@@ -202,42 +202,65 @@
                   <div class="row">
                       <div class="story-container clearfix">
                           <!-- Your photo goes here -->
-                          <div class="col-sm-4 photo-container">
-                              <img alt="photo of me" src="img/photographer.png" id="photographer-img">
-                          </div>
+                          <img alt="photo of me" src="img/photographer.png" id="photographer-img">
                           <!-- CV section -->
-                          <div class="col-sm-8 cv-container">
+                          <div class="cv-container col-sm-8">
+                              <div class="story-pointer-row row">
+                                  <!-- Story pointers pointing to different story on click -->
+                                  <span class="story-pointer active" data-target="story-now">
+                                      <span class="tooltip-time active">2012-today</span>
+                                  </span>
+                                  <span class="story-pointer" data-target="story-senior">
+                                      <span class="tooltip-time">2006-2012</span>
+                                  </span>
+                                  <span class="story-pointer" data-target="story-junior">
+                                      <span class="tooltip-time">2002-2006</span>
+                                  </span>
+                                  <span class="story-pointer" data-target="story-education">
+                                      <span class="tooltip-time">1998-2002</span>
+                                  </span>
+                              </div>
+
+                              <!-- Timeline stories -->
                               <div class="story">
-                                  <span class="story-pointer hidden-xs"></span>
-                                  <div id="story-now">
-                                      <h2 class="time-heading"><strong>2012 - today</strong></h2>
-                                      <h3 class="story-heading"><strong>Freelancer Photographer</strong></h3>
-                                      <p class="story-details">In 2012 I decided that life is too short to not do what pleases you the most. I quit my job and since then I've travelled in every single continent, visiting over 40 countries to capture life in its wildest or most peaceful moments.</p>
-                                  </div>
+                                  <article id="story-now">
+                                      <h2 class="story-heading animated flipInX">Freelance Photographer</h2>
+                                      <h3 class="time-heading animated fadeIn"><strong>2012 - today</strong></h3>
+                                      <p class="story-details animated fadeInUp">In 2012 I decided that life is too short to not do what pleases you the most. I quit my job and since then I've travelled in every single continent, visiting over 40 countries to capture life in its wildest or most peaceful moments.</p>
+                                      <div class="story-image-container animated zoomIn">
+                                          <img class="story-image img-responsive" alt="Chinese nature" src="img/aboutme_china.jpg">
+                                      </div>
+                                  </article>
                               </div>
                               <div class="story">
-                                  <span class="story-pointer hidden-xs"></span>
-                                  <div id="story-senior">
-                                      <h2 class="time-heading"><strong>2006 - 2012</strong></h2>
-                                      <h3 class="story-heading"><strong>Senior Photographer &mdash; <i>The Scorching News</i>, London UK</strong></h3>
-                                      <p class="story-details">For 6 years I worked and lived in one of Europe's largest capitals. While working <i>The Scorching News</i> I had to visit over 20 countries, capturing breathtaking photography for news coverage. I also organized about 30 photography exhibitions.</p>
-                                  </div>
+                                  <article id="story-senior">
+                                      <h2 class="story-heading animated flipInX">Senior Photographer &mdash; <i>The Scorching News</i>, London UK</h2>
+                                      <h3 class="time-heading animated fadeIn"><strong>2006 - 2012</strong></h3>
+                                      <p class="story-details animated fadeInUp">For 6 years I worked and lived in one of Europe's largest capitals. While working <i>The Scorching News</i> I had to visit over 20 countries, capturing breathtaking photography for news coverage. I also organized about 30 photography exhibitions.</p>
+                                      <div class="story-image-container animated zoomIn">
+                                          <img class="story-image img-responsive" alt="Big Ben by night" src="img/aboutme_london.jpg">
+                                      </div>
+                                  </article>
                               </div>
                               <div class="story">
-                                  <span class="story-pointer hidden-xs"></span>
-                                  <div id="story-junior">
-                                      <h2 class="time-heading"><strong>2002 - 2006</strong></h2>
-                                      <h3 class="story-heading"><strong>Junior Photographer &mdash; <i>Tuesday Times</i>, NYC</strong></h3>
-                                      <p class="story-details">For 3 years I worked as a junior photographer where I provided support to senior photographer in editing and capturing astounding photography for story covers.</p>
-                                  </div>
+                                  <article id="story-junior">
+                                      <h2 class="story-heading animated flipInX"><strong>Junior Photographer &mdash; <i>Tuesday Times</i>, NYC</strong></h2>
+                                      <h3 class="time-heading animated fadeIn"><strong>2002 - 2006</strong></h3>
+                                      <p class="story-details animated fadeInUp">For 3 years I worked as a junior photographer where I provided support to senior photographer in editing and capturing astounding photography for story covers.</p>
+                                      <div class="story-image-container animated zoomIn">
+                                          <img class="story-image img-responsive" alt="NYC from helicopter" src="img/aboutme_newyork.jpg">
+                                      </div>
+                                  </article>
                               </div>
                               <div class="story">
-                                  <span class="story-pointer hidden-xs"></span>
-                                  <div id="story-education">
-                                      <h2 class="time-heading"><strong>1998 - 2002</strong></h2>
-                                      <h3 class="story-heading"><strong>BA in Fine Arts &amp; Photography &mdash; School of the Art, Institute of Chicago</strong></h3>
-                                      <p class="story-details">During my studies at the School of the Art in Chicago I excelled in the Fine Arts and Art History. I familiarized myself with the aesthetics of a variety of arts movements while trying to develop my own style.</p>
-                                  </div>
+                                  <article id="story-education">
+                                      <h2 class="story-heading animated flipInX">BA in Fine Arts &amp; Photography &mdash; School of the Art, Institute of Chicago</h2>
+                                      <h3 class="time-heading animated fadeIn"><strong>1998 - 2002</strong></h3>
+                                      <p class="story-details animated fadeInUp">During my studies at the School of the Art in Chicago I excelled in the Fine Arts and Art History. I familiarized myself with the aesthetics of a variety of arts movements while trying to develop my own style.</p>
+                                      <div class="story-image-container animated zoomIn">
+                                          <img class="story-image img-responsive" alt="University entrance" src="img/aboutme_university.jpg">
+                                      </div>
+                                  </article>
                               </div>
                           </div>
                       </div>
