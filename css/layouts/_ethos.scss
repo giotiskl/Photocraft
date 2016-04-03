@@ -4,12 +4,12 @@
     background-position: center;
     background-size: cover;
     color: white;
-    height: 35vh;
+    height: 320px;
     position: relative;
 
     @include mq-tablet {
         background-attachment: fixed;
-        height: 55vh;
+        height: 480px;
     }
 
     @include mq-desktop {
