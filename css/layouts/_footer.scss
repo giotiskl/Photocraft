@@ -1,11 +1,12 @@
 .main-footer {
     background-color: $colorLightGray;
     box-shadow: inset 0 2px 2px rgba(0,0,0,0.25);
+    color: #cbc8c8;
     text-align: center;
     padding-bottom: 2rem;
 
     .site-footer-nav {
-        color: #b6b6b6;
+        color: #9c9c9c;
         margin-bottom: 1.5rem;
 
         @include mq-tablet {
@@ -28,7 +29,7 @@
         }
 
         .social-btn i {
-            color: #b6b6b6;
+            color: #cbc8c8;
         }
 
         .social-btn:hover i {
@@ -46,7 +47,7 @@
     }
 
     .main-link {
-        color: #b6b6b6 !important;
+        color: #9c9c9c !important;
 
         &:hover {
             color: $colorMain !important;
