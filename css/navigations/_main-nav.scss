@@ -70,7 +70,7 @@
     }
 
     .overlay {
-        @include background(linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0)))
+        @include background(linear-gradient(rgba(23,23,23,1), rgba(0,0,0,0)))
         opacity: 0;
         height: 70vh;
         width: 100%;
