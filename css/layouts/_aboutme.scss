@@ -1,45 +1,36 @@
 .about-me {
     background-color: white;
     color: $colorBlack;
+    padding-bottom: 7rem;
+    position: relative;
 
     h1 {
         margin-bottom: 4rem;
     }
 
     .story-container {
-        box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-        overflow: hidden;
 
-        .photo-container {
-            @include background(linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.25)),
-                                url("../../img/photographerbg.jpg"));
-            background-position: center;
-            background-size: cover;
-            padding-top: 1rem;
-            height: 42rem;
-            margin-bottom: -10rem;
-            position: relative;
+        //photographer photo
+        .story-img {
+            @include filter(grayscale(100%));
+            display: none;
+            opacity: .25;
+            max-width: 300px;
+            height: auto;
+            position: absolute;
+            transform: translateX(-15%);
+            left: 15%;
+            bottom: 0;
 
-            //photographer photo
-            img {
-                @include animation-duration(2s);
-                max-width: 80%;
-                opacity: 0;
-                height: auto;
-                position: absolute;
-                bottom: 0;
-                @include mq-desktop {
-                    bottom: 4rem;
-                }
-                @include mq-large-desktop {
-                    bottom: 6.5rem;
-                }
+            @include mq-tablet {
+                display: block;
             }
         }
 
         .cv-container {
-            background-color: $colorLightGray;
-            padding: 1rem;
+            padding: 1rem 1rem 1rem 1rem;
+            position: relative;
+            float: right;
 
             @include mq-tablet {
                 border-left:  1px dashed rgba(244, 156, 18,0.35);
@@ -47,21 +38,40 @@
             }
         }
 
-        //Story component in CV container resembling a unique story in the timeline
-        .story {
+        //Story pointer component - dynamically positioned by JS
+        .story-pointer-row {
+            border-bottom:  1px dashed rgba(244, 156, 18,0.35);
+            margin-bottom: 2rem;
             position: relative;
 
-            .story-pointer {
-                background-color: white;
-                border: 1px solid #e0dede;
-                border-radius: 50%;
-                display: block;
-                width: 22px;
-                height: 22px;
-                position: absolute;
-                left: -3.7rem;
-                top: 3.5rem;
-                transition: all .5s ease-out;
+            @include mq-tablet {
+                border: none;
+                margin: 0;
+                position: static;
+            }
+        }
+
+        .story-pointer {
+            background-color: white;
+            border: 1px solid #e0dede;
+            border-radius: 50%;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+            cursor: pointer;
+            display: block;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            transition: all .5s ease-out;
+        }
+
+        .story-pointer:hover, .story-pointer.active {
+            background-color: $colorMain;
+        }
+
+        //Story component in CV container resembling a unique story in the timeline
+        .story {
+            article {
+                display: none;
             }
 
             .time-heading, .story-heading {
@@ -70,39 +80,24 @@
             }
 
             .time-heading {
-                font-size: 110%;
+                font-size: 140%;
                 text-transform: none;
+                margin-bottom: .5rem;
             }
 
             .story-heading {
+                @include animation-delay(.25s);
                 color: $colorMain;
-                font-size: 90%;
+                font-weight: 300;
+                font-size: 220%;
+                margin-bottom: 2.5rem;
             }
 
             .story-details {
-                font-size: 90%;
+                @include animation-delay(.5s);
+                font-size: 120%;
+                line-height: 200%;
             }
-        }
-
-        //pointer transition
-        .story:hover {
-            .story-pointer {
-                background-color: $colorMain;
-            }
-        }
-
-        //animations
-        #story-now, #story-senior, #story-junior, #story-education {
-            opacity: 0;
-        }
-        #story-senior {
-            @include animation-delay(.25s);
-        }
-        #story-junior {
-            @include animation-delay(.5s);
-        }
-        #story-education {
-            @include animation-delay(.75s);
         }
 
     }

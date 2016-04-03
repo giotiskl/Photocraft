@@ -1,10 +1,6 @@
 /*******************************************
                 MEDIA QUERIES
 *******************************************/
-$tablet-width: 768px;
-$desktop-width: 992px;
-$large-desktop-width: 1200px;
-
 @mixin mq-tablet {
   @media (min-width: #{$tablet-width}) {
     @content;

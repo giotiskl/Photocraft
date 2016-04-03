@@ -65,14 +65,53 @@ $(function() {
         /*******************************
         *           ABOUT ME
         ********************************/
-        $('.story-container').waypoint(function() {
-            $('#photographer-img').addClass('animated fadeInUp');
-            $('#story-now').addClass('animated fadeInRight');
-            $('#story-senior').addClass('animated fadeInRight');
-            $('#story-junior').addClass('animated fadeInRight');
-            $('#story-education').addClass('animated fadeInRight');
-        }, {
-            offset: '80%'
+        /**
+        * (Re)arranges the story pointer buttons in the timeline responsively
+        */
+        function setupTimelineControls() {
+            var onMobile   = $(window).width() < 751,
+                distance   = (100 / $('.story-pointer').size()),
+                direction  = onMobile ? 'left' : 'top';
+                initMargin = distance / 2 - (onMobile ? 2 : 5);
+
+            $('.story-pointer').each(function(i, e) {
+                //Reset
+                $(e).css({
+                    top: 0,
+                    left: 0
+                });
+                //Set left - top responsively
+                if (onMobile)
+                    $(e).css('top', '-0.75rem');
+                else
+                    $(e).css('left', '-0.65rem');
+
+                //Set to proper position
+                $(e).css(direction, (i * distance + initMargin) + '%');
+            });
+        }
+
+        //Set up timeline controls functionality & EFX
+        setupTimelineControls();
+
+        $('.story-pointer').click(function() {
+            var storyToActivate = '#' + $(this).data('target');
+            $('.story-pointer').removeClass('active');
+            $(this).addClass('active');
+
+            $('.story article').css('display', 'none');
+            $(storyToActivate).css('display', 'block');
+        });
+
+        $('.story-pointer.active').click();
+
+        //Set up a window event to responsively rearrange the timeline controls
+        var onMobile = $(window).width() < 751;
+        $(window).resize(function() {
+            if (onMobile !== $(window).width() < 751) {
+                onMobile = !onMobile;
+                setupTimelineControls();
+            }
         });
     });
 
