@@ -12,6 +12,8 @@ body, html {
 
 //headings
 h1,h2,h3 {
+    margin: 0;
+    padding: 0;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -23,4 +25,13 @@ h1 {
 //input
 input, button, textarea, a:focus {
     outline: 0;
+}
+
+//sections
+.about-me, .contact, .main-footer {
+    padding: 4rem 0;
+
+    @include mq-tablet {
+        padding: 6rem 0;
+    }
 }

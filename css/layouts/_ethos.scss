@@ -1,0 +1,103 @@
+.ethos {
+    @include background(linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.25)),
+                        url("../../img/ethosbg.jpg"));
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 35vh;
+    position: relative;
+
+    @include mq-tablet {
+        background-attachment: fixed;
+        height: 55vh;
+    }
+
+    @include mq-desktop {
+        height: 60vh;
+    }
+
+    @include mq-large-desktop {
+        height: 70vh;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    img {
+        @include filter(grayscale(100%));
+        right: 1.5rem;;
+        top: 10rem;
+        max-width: 140px;
+        height: auto;
+        position: absolute;
+
+        @include mq-tablet {
+            max-width: 260px;
+            right: 2rem;
+        }
+
+        @include mq-desktop {
+            max-width: 320px;
+        }
+
+        @include mq-large-desktop {
+            top: 12rem;
+            max-width: 375px;
+        }
+    }
+
+    blockquote {
+        border: none;
+        font-size: 125%;
+        text-align: right;
+        text-transform: uppercase;
+        position: absolute;
+        left: 1rem;
+        top: 3rem;
+
+        cite {
+            text-transform: none;
+        }
+
+        @include mq-tablet {
+            font-size: 180%;
+            left: 4rem;
+        }
+
+        @include mq-desktop {
+            font-size: 240%;
+            top: 4.5rem;
+            left: 4rem;
+        }
+
+        @include mq-large-desktop {
+            top: 6rem;
+            font-size: 300%;
+        }
+    }
+
+    blockquote:before {
+        content: '\201c';
+        font-size: 300%;
+        display: block;
+        position: absolute;
+        left: -.1rem;
+        top: -1rem;
+
+        @include mq-tablet {
+            left: -1rem;
+            top: -2rem;
+        }
+
+        @include mq-desktop {
+
+        }
+
+        @include mq-large-desktop {
+            font-size: 400%;
+            left: -3.5rem;
+            top: -4.5rem;
+        }
+    }
+}

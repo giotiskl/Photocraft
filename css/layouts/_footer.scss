@@ -1,10 +1,11 @@
 .main-footer {
-    background-color: $colorBlack;
-    color: white;
-    padding: 2rem 0;
+    background-color: $colorLightGray;
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.25);
     text-align: center;
+    padding-bottom: 2rem;
 
     .site-footer-nav {
+        color: #b6b6b6;
         margin-bottom: 1.5rem;
 
         @include mq-tablet {
@@ -25,15 +26,30 @@
         li {
             margin: 0 0.5rem;
         }
+
+        .social-btn i {
+            color: #b6b6b6;
+        }
+
+        .social-btn:hover i {
+            color: $colorMain !important;
+        }
     }
 
     p {
-        color: #b6b6b6;
         font-size: 90%;
         padding: 0 1rem;
 
         @include mq-tablet {
-            margin-top: 3rem;
+            margin-top: 5rem;
+        }
+    }
+
+    .main-link {
+        color: #b6b6b6 !important;
+
+        &:hover {
+            color: $colorMain !important;
         }
     }
 }

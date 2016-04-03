@@ -1,9 +1,9 @@
 .about-me {
-    background-color: $colorBlack;
-    color: white;
-    padding-bottom: 2rem;
+    background-color: white;
+    color: $colorBlack;
+
     h1 {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     .story-container {
@@ -38,7 +38,7 @@
         }
 
         .cv-container {
-            background-color: $colorBlackLight;
+            background-color: $colorLightGray;
             padding: 1rem;
 
             @include mq-tablet {

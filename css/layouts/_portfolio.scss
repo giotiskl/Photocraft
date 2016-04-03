@@ -1,7 +1,17 @@
 .portfolio {
-    color: white;
+    color: $colorBlack;
+    padding: 4rem 0 0 0;
+
+    @include mq-tablet {
+        padding: 4rem 0 0 0;
+    }
+
+    h1 {
+        margin-bottom: 4rem;
+    }
 
     .horizontal-nav {
+        margin-bottom: 2rem;
         padding: 0;
         text-align: center;
 

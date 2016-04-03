@@ -1,14 +1,9 @@
 .contact {
     color: white;
     text-align: right;
-    padding: 1rem;
-
-    @include mq-tablet {
-        padding: 0 0 2rem 0;
-    }
 
     h1 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 4rem;
     }
 
     .contact-details {
@@ -22,6 +17,13 @@
 
         .row {
             margin-bottom: 1rem;
+        }
+    }
+
+    .contact-form {
+        .row {
+            margin-bottom: .5rem;
+            padding: 0 1rem;
         }
     }
 
